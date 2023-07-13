@@ -1,0 +1,418 @@
+<!DOCTYPE>
+<html>
+  <head>
+    
+    <style>
+    body{
+        position: relative;
+        background: chocolate;
+      }
+   .project{
+     position: absolute;
+     top: 30%;
+     left: 30%;
+  width: 380px;
+  height: auto;
+  background: white;
+  box-shadow: 3px 3px 5px black;
+  padding: 30px;
+  border-radius: 15px;
+}
+.project h1{
+  color: green;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.project h1::before{
+  content: "";
+  top: 98px;
+  right: 125px;
+  width: 45%;
+  height: 4px;
+  background: red;
+  position: absolute;
+}
+.project h1::after{
+  content: "o";
+  font-size: 20px;
+  top: 87px;
+  left: 47%;
+  padding: 0 5px;
+  color: black;
+  background: white;
+  position: absolute;
+}
+input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:100%;
+  padding: 9px;
+  font-size: 18px;
+}
+#btnDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+button{
+  margin-top: 20px;
+  width: 130px;
+  padding: 15px;
+  outline: 0;
+  border-radius: 15px;
+  font-size: 25px;
+  font-weight: bold;
+}
+#calculateBtn{
+  background: green;
+  margin-left: 30px;
+}
+#resetBtn{
+  background: red;
+  margin-right: 30px;
+}
+.mainBox{
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-top: 30px;
+  padding: 15px;
+}
+.mainBox h4{
+  text-align: center;
+  color: red;
+  font-size: 28px;
+}
+.rslt{
+  display: flex;
+}
+.bmiR{
+  font-size: 70px;
+  color: orange;
+  margin-right: 20px;
+  margin-left: 25px;
+}
+.bmiT span{
+  font-size: 40px;
+}
+.bmiT p{
+  font-weight: bold;
+  font-size: 20px;
+  color: green;
+  margin-top: 2px;
+}
+hr{
+  height: 2px;
+  margin: 15px 0;
+  background: gray;
+}.mainD{
+  position: relative;
+  margin-bottom: 10px;
+}
+.under-Box{
+  border-radius: 40px;
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 100%;
+  height: 6px;
+  background: crimson;
+}
+.normal-Box{
+  border-radius: 40px;
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 66.67%;
+  height: 6px;
+  background: green;
+}
+.over-Box{
+  border-radius: 40px;
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 33.31%;
+  height: 6px;
+  background: blue;
+}
+.under-text{
+  font-weight: bold;
+  color: blue;
+  margin-left: 15px;
+  margin-right: 45px;
+}
+.normal-text{
+  font-weight: bold;
+  color: green;
+}.over-text{
+  font-weight: bold;
+  margin-left: 42px;
+  color: crimson;
+}.underN{
+  margin-right: 70px;
+}
+.normaleN{
+  margin-right: 75px;
+}
+.overN{
+  margin-right: 65px;
+}
+.power{
+  margin-top: 22px;
+  margin-bottom: 8px;
+  color: gray;
+  font-size: 12px;
+  text-align: center;
+}.powerInner{
+  color: crimson;
+}
+
+
+/*Responsib for small device */
+@media (max-width:720px){
+  
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+body{
+        position: relative;
+        background: black;
+      }
+
+   .project{
+   top: 0;
+   left: 0;
+  width: 300px;
+  height: 100vh;
+  background: white;
+  box-shadow: 5px 5px 5px black;
+  padding: 30px;
+}
+.project h1{
+  color: green;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 29px;
+  position: relative;
+}
+.project h1::before{
+  content: "";
+  top: 45px;
+  right: 55px;
+  width: 65%;
+  height: 4px;
+  background: red;
+  position: absolute;
+}
+.project h1::after{
+  content: "o";
+  font-size: 20px;
+  top: 35px;
+  left: 47%;
+  padding: 0 5px;
+  color: black;
+  background: white;
+  position: absolute;
+}
+#resetBtn{
+  background: red;
+  margin-left: 60px;
+}
+
+.under-text{
+  font-weight: bold;
+  color: blue;
+  margin-left: 5px;
+  margin-right: 17px;
+  font-size: 12px;
+}
+.normal-text{
+  font-weight: bold;
+  color: green;
+  margin-right: 5px;
+  font-size: 12px;
+}.over-text{
+  font-weight: bold;
+  margin-left: 36px;
+  color: crimson;
+  font-size: 12px;
+}
+.underN{
+  margin-right: 40px;
+}
+.normaleN{
+  margin-right: 55px;
+}
+.overN{
+  margin-right: 36px;
+}
+.mainBox h4{
+  text-align: center;
+  color: red;
+  font-size: 28px;
+  margin: 17px 0;
+}
+.power{
+  margin-top: 22px;
+  margin-bottom: 8px;
+  color: gray;
+  font-size: 12px;
+  text-align: center;
+}.powerInner{
+  color: crimson;
+}
+.bmiR{
+  font-size: 50px;
+  color: orange;
+  margin-right: 7px;
+  margin-left: 28px;
+}
+.bmiT span{
+  font-size: 30px;
+}
+.bmiT p{
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 2px;
+}
+hr{
+  height: 2px;
+  margin: 15px 0;
+  background: gray;
+}
+
+}
+
+    </style>
+    
+  </head>
+  <body>
+    
+    <div class="project">
+      <h1>BMI Calculator</h1>
+  <label>Weight</label>
+  <label>(Kilogram)</label>
+  <input type="number" id="weightInput" placeholder="Weight"/>
+  <label>Height</label>
+  <label>(Centimeter)</label>
+  <input type="number" id="heightInput" placeholder="Height"/>
+  
+  <div id="btnDiv">
+    <button id="calculateBtn">Go</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+  
+<div class="mainBox">
+    <div class="rslt">
+    <div class="bmiR">
+       <span id="demo">0</span>
+    </div>
+    <div class="bmiT">
+      <span>BMI</span>
+      <p id="demo1"> </p>
+    </div>
+  </div>
+  
+       <hr/>
+  <h4>Information</h4>
+  
+<span class="under-text">Underweight</span> 
+<span class="normal-text">Normal</span> 
+<span class="over-text">Overweight</span> 
+
+<div class="mainD">
+  <div class="under-Box"></div>
+<div class="normal-Box"></div>
+<div class="over-Box"></div>
+</div>
+
+<div class="numberBox">
+<span class="underN">16.0</span> 
+<span class="normaleN">18.5</span> 
+<span class="overN">25.0</span> 
+<span class="overNN">40.0</span> 
+</div>
+  
+  <p class="power">Powered by <span class="powerInner">SH Khuka</span></p>
+</div>
+  
+
+
+
+    </div>
+    
+    <script>
+      
+   const weightInput = document.getElementById("weightInput");
+  const heightInput = document.getElementById("heightInput");
+
+  const calculateBtn = document.getElementById("calculateBtn");
+  const resetBtn = document.getElementById("resetBtn");
+  const bmi = document.getElementById("demo");
+  const h5 = document.getElementById("demo1");
+  
+   function calculateBmi(){
+     
+   const weight = weightInput.value;
+   const height = heightInput.value;
+   const heightNew = (height / 100)**2;
+   
+   const result = weight / heightNew;
+  //console.log(result)
+    bmi.innerHTML = result.toFixed(2);
+  const resultNew =  showMsg(result)
+  h5.innerHTML = resultNew;
+  
+  if(h5.innerHTML == "Underweight"){
+    h5.style.color = "blue"
+  }
+  if(h5.innerHTML == "Normal"){
+    h5.style.color = "green"
+  }
+  if(h5.innerHTML == "Overweight"){
+    h5.style.color = "crimson"
+  }
+   }
+   
+   function showMsg(e){
+     if(e < 18.5){
+       return "Underweight"
+     }else if(e < 25.0){
+       return "Normal"
+     }else if(e > 25.0){
+       return "Overweight"
+     }
+     }
+   
+   
+   
+   function resetBmi(){
+     weightInput.value = ""
+     heightInput.value = ""
+     bmi.innerHTML = 0;
+     h5.innerHTML = ""
+   }
+  
+  function eventHand(){
+       const weight =parseInt(weightInput.value);
+   const height = parseInt(heightInput.value);
+    
+    if(weight && height){
+      calculateBmi()
+    }
+    else{
+      alert("please type valid number ")
+      resetBmi();
+    }
+  }
+   
+ calculateBtn.addEventListener("click", eventHand)
+    resetBtn.addEventListener("click", resetBmi)
+      
+    </script>
+    
+  </body>
+</html>
